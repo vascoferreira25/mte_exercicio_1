@@ -1,6 +1,7 @@
 package org.upskill;
+import org.upskill.Point;
 
-public class Circle {
+public class Circle extends Figure {
     private Point points;
     private double radius;
 
@@ -10,6 +11,11 @@ public class Circle {
     }
 
     public Circle() {
+    }
+
+    @Override
+    public double area() {
+        return Math.PI * Math.pow(this.radius, 2);
     }
 
     public Point getPoints() {
@@ -27,6 +33,7 @@ public class Circle {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
 
     @Override
     public String toString() {
