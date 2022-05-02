@@ -1,5 +1,7 @@
 package org.upskill;
 
+import java.util.Objects;
+
 /**
  * TODO: Class that represents a Figure.
  */
@@ -31,21 +33,21 @@ public abstract class Figure {
     //                          Getters and Setters                          //
     ///////////////////////////////////////////////////////////////////////////
 
-    // /**
-    //  * Get the value of color.
-    //  * @return the value of color.
-    //  */
-    // public String getColor() {
-    //     return this.color;
-    // }
+     /**
+      * Get the value of color.
+      * @return the value of color.
+      */
+     public String getColor() {
+         return this.color;
+     }
 
-    // /**
-    //  * Set the value of color.
-    //  * @param color the new value of color.
-    //  */
-    // public void setColor(String color) {
-    //     this.color = color;
-    // }
+     /**
+      * Set the value of color.
+      * @param color the new value of color.
+      */
+     public void setColor(String color) {
+         this.color = color;
+     }
     
     ///////////////////////////////////////////////////////////////////////////
     //                                Methods                                //
@@ -68,30 +70,17 @@ public abstract class Figure {
                              this.color);
     }
 
-    /**
-     * Compares Figure with another object to check if it's equal.
-     * @param o object to compare with.
-     * @return true if its equal or false if it's not equal.
-     */
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Figure otherFigure = (Figure) o;
-        return this.color.equals(otherFigure.color);
+        if (this == o) return true;
+        if (!(o instanceof Figure)) return false;
+        Figure figure = (Figure) o;
+        return Objects.equals(color, figure.color);
     }
 
-    /**
-     * Creates a hashcode for Figure.
-     * @return hashcode.
-     */
     @Override
     public int hashCode() {
-        return Objects.hash(this.color);
+        return Objects.hash(color);
     }
 
     // TODO: implements Comparable<Figure>
