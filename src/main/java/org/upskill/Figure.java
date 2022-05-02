@@ -6,7 +6,7 @@ package org.upskill;
 public abstract class Figure {
     private String color;
 
-    private static final int DEFAULT_COLOR = "blue";
+    private static final String DEFAULT_COLOR = "blue";
 
     ///////////////////////////////////////////////////////////////////////////
     //                              Constructors                             //
@@ -35,7 +35,7 @@ public abstract class Figure {
     //  * Get the value of color.
     //  * @return the value of color.
     //  */
-    // public int getColor() {
+    // public String getColor() {
     //     return this.color;
     // }
 
@@ -43,7 +43,7 @@ public abstract class Figure {
     //  * Set the value of color.
     //  * @param color the new value of color.
     //  */
-    // public void setColor(int color) {
+    // public void setColor(String color) {
     //     this.color = color;
     // }
     
@@ -82,7 +82,7 @@ public abstract class Figure {
             return false;
         }
         Figure otherFigure = (Figure) o;
-        return this.color == otherFigure.color;
+        return this.color.equals(otherFigure.color);
     }
 
     /**
