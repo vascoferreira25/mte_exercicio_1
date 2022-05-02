@@ -5,6 +5,8 @@ public class Circle extends Figure {
     private Point points;
     private double radius;
 
+    private static double pi = 3.14;
+
     public Circle (Point points, double radius) {
         this.points = points;
         this.radius = radius;
@@ -16,6 +18,11 @@ public class Circle extends Figure {
     @Override
     public double area() {
         return Math.PI * Math.pow(this.radius, 2);
+    }
+
+    @Override
+    public double perimeter() {
+        return 2 * ( pi * this.radius );
     }
 
     public Point getPoints() {

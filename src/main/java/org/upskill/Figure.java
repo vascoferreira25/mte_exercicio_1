@@ -29,6 +29,12 @@ public abstract class Figure {
         this.color = color;
     }
 
+    /**
+     * Metodo abstrato, utilizado na classe Circulo e Rectângulo!
+     * @return
+     */
+    public abstract double perimeter ();
+
     ///////////////////////////////////////////////////////////////////////////
     //                          Getters and Setters                          //
     ///////////////////////////////////////////////////////////////////////////
