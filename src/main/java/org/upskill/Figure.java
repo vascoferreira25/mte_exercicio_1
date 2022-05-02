@@ -31,21 +31,21 @@ public abstract class Figure {
     //                          Getters and Setters                          //
     ///////////////////////////////////////////////////////////////////////////
 
-    /**
-     * Get the value of color.
-     * @return the value of color.
-     */
-    public int getColor() {
-        return this.color;
-    }
+    // /**
+    //  * Get the value of color.
+    //  * @return the value of color.
+    //  */
+    // public int getColor() {
+    //     return this.color;
+    // }
 
-    /**
-     * Set the value of color.
-     * @param color the new value of color.
-     */
-    public void setColor(int color) {
-        this.color = color;
-    }
+    // /**
+    //  * Set the value of color.
+    //  * @param color the new value of color.
+    //  */
+    // public void setColor(int color) {
+    //     this.color = color;
+    // }
     
     ///////////////////////////////////////////////////////////////////////////
     //                                Methods                                //
